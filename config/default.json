@@ -1,0 +1,4 @@
+{
+  "routes": ["configurator", "spectron", "online"],
+  "port": 3000
+}

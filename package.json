@@ -1,0 +1,32 @@
+{
+  "name": "allure-reports-portal",
+  "version": "1.0.0",
+  "description": "Allure reports portal",
+  "main": "./dist/main.js",
+  "scripts": {
+    "start": "nodemon"
+  },
+  "repository": "https://github.com/pumano/allure-reports-portal",
+  "keywords": [
+    "allure",
+    "reports",
+    "tests",
+    "results",
+    "portal",
+    "typescript"
+  ],
+  "author": "Dmitry Zakharov",
+  "license": "MIT",
+  "dependencies": {
+    "config": "^2.0.1",
+    "express": "4.16.3",
+    "morgan": "^1.9.1",
+    "typescript": "^2.8.0"
+  },
+  "devDependencies": {
+    "@types/node": "^7.0.41",
+    "nodemon": "^1.18.4",
+    "ts-node": "^6.0.0",
+    "tslint": "^5.9.1"
+  }
+}
