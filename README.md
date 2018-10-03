@@ -9,9 +9,20 @@ Host your allure reports for multiple projects on the same server.
 * npm
 
 # How to use
-clone project:
+
+create folder:
 ```bash
-$ git clone https://github.com/pumano/allure-reports-portal.git
+$ mkdir allure-reports-portal
+```
+
+clone project to allure-reports-portal folder:
+```bash
+$ git clone https://github.com/pumano/allure-reports-portal.git allure-reports-portal
+```
+
+navigate to allure-reports-portal folder:
+```bash
+$ cd allure-reports-portal/
 ```
 
 install dependencies:
@@ -19,6 +30,8 @@ install dependencies:
 ```bash
 $ npm install
 ```
+
+configure routes for server: (see `Config` section)
 
 start web server
 ```bash
