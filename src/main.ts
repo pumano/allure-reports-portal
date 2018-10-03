@@ -12,40 +12,58 @@ async function bootstrap() {
 
   // Point static path to dist
   app.use(express.static(path.join(__dirname, '..', 'uploads')));
+  app.use(express.static(path.join(__dirname, '..', 'vendor')));
 
+  // main route
   app.get('/', (req, res) => {
 
-    const links = config.get("routes").map((val) => {
-      return `<li><a href="${val}">${val}</a></li>`;
+    const links = config.get('routes').map((link) => {
+      return `
+              <div class="col-sm-6 col-md-4">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title">
+                        ${link}
+                    </h5>
+                    <a href="${link}" class="btn btn-primary">Report</a>
+                  </div>
+                </div>
+              </div>`;
     }).join('');
 
     res.send(`
-    <!DOCTYPE html>
-    <html>
-    <head>
-    <base href="/">
-    </head>
-    <body>
-    <ul>
-    ${links}
-    </ul>
-    </body>
-    </html>
+          <!DOCTYPE html>
+            <html>
+              <head>
+                <meta charset="utf-8">
+                <base href="/">
+                <link rel="stylesheet" href="bootstrap.min.css">
+              </head>
+              <body>
+                <div class="row">
+                  <div class="col-xs-12 mx-auto">
+                    <h1>Allure Reports Portal</h1>
+                  </div>
+                </div>
+                <div class="row">
+                  ${links}
+                </div>
+              </body>
+            </html>
     `);
   });
 
-  
   // set dynamic routes
   await config.get('routes').forEach(project => {
 
     console.log(`project: ${project} loaded`);
-    
+
     app.use(`/${project}`, (req, res) => {
       res.sendFile(path.resolve(path.join(__dirname, '../uploads', `${project}/index.html`)));
     });
   });
 
-  await app.listen(config.get("port"));
+  await app.listen(config.get('port'));
 }
 
 bootstrap();

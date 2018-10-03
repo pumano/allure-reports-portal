@@ -72,5 +72,4 @@ You can see all project's links.
 
 # TODO
 
-* better UI for main page: `'/'`
 * publish as package to npm
