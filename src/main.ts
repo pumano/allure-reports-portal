@@ -21,7 +21,7 @@ async function bootstrap() {
       return `
               <div class="col-sm-6 col-md-4">
                 <div class="card">
-                  <div class="card-body">
+                  <div class="card-body text-center">
                     <h5 class="card-title">
                         ${link}
                     </h5>
