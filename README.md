@@ -41,7 +41,7 @@ start web server
 $ npm start
 ```
 
-access via: `yourIPorDomainName:3000`
+access via: `yourIPorDomainName:3000` usually locally it's `http://localhost:3000` 
 
 You can see all project's links.
 
