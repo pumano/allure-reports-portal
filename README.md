@@ -1,4 +1,7 @@
 # allure-reports-portal
+
+![img](https://i.imgur.com/xpjU8MZ.png)
+
 Simple allure reports server. 
 
 Host your allure reports for multiple projects on the same server.
@@ -86,7 +89,10 @@ uploads/
 }
 ```
 
-**note: also if you want to customize title of "Allure Reports Portal" you can change settings in `config/default.json`**
+**note: also if you want to customize title of "Allure Reports Portal"**
+![img](https://i.imgur.com/q3SmUFk.png)
+
+**you can change settings in `config/default.json`**
 ```json
 {
   ...
