@@ -19,13 +19,15 @@ async function bootstrap() {
 
     const links = config.get('routes').map((link) => {
       return `
-              <div class="col-sm-6 col-md-4">
+              <div class="col-sm-6 col-md-4 col-sm-12 col-xs-12">
                 <div class="card">
                   <div class="card-body text-center">
                     <h5 class="card-title">
                         ${link}
                     </h5>
-                    <a href="${link}" class="btn btn-primary">Report</a>
+                  </div>
+                  <div class="card-footer text-center">
+                    <a href="${link}" class="btn btn-primary">Open</a>
                   </div>
                 </div>
               </div>`;
@@ -45,7 +47,7 @@ async function bootstrap() {
                     <h1>Allure Reports Portal</h1>
                   </div>
                 </div>
-                <div class="row">
+                <div class="row col-xs-12 mx-auto">
                   ${links}
                 </div>
               </body>
