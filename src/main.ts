@@ -44,7 +44,7 @@ async function bootstrap() {
               <body>
                 <div class="row">
                   <div class="col-xs-12 mx-auto">
-                    <h1>Allure Reports Portal</h1>
+                    <h1>${config.get('title')}</h1>
                   </div>
                 </div>
                 <div class="row col-xs-12 mx-auto">
