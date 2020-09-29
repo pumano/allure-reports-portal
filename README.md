@@ -71,10 +71,10 @@ You can see all project's links.
 uploads/
 ├── project1/
 │   ├── index.html from allure-report folder
-│   └── all other files and folders from allure-report folder for project1
+│   └── all other files and folders from allure-report folder
 ├── project2/
 │   ├── index.html from allure-report folder
-│   └── all other files and folders from allure-report folder for project1
+│   └── all other files and folders from allure-report folder
 └── project3/
     ├── ...
     └── ...
